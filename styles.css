@@ -44,3 +44,26 @@ footer {
     text-align: center;
     padding: 0.5rem;
 }
+/* Ripple container */
+.alert-ripple {
+    position: absolute;
+    width: 50px; /* Initial size of the ripple */
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 69, 0, 0.5); /* Reddish-orange */
+    pointer-events: none; /* Prevent interaction */
+    animation: ripple 5s infinite;
+    transform: translate(-50%, -50%); /* Center the ripple */
+}
+
+/* Ripple animation */
+@keyframes ripple {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(10);
+        opacity: 0;
+    }
+}

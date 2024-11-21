@@ -124,8 +124,6 @@ const gatewayMarkers = gateways.map((gateway, index) => {
 
     return marker;
 });
-
-// Add wells to the map and connect to the nearest gateway
 wells.forEach((well, index) => {
     const markerOptions = well.alert
         ? {
@@ -133,18 +131,34 @@ wells.forEach((well, index) => {
               color: 'orange',
               fillColor: '#ffa500',
               fillOpacity: 1.0,
-              radius: 6000,
+              radius: 5000,
               className: 'alert-glow',
           }
         : {
               pane: 'markersPane',
               color: 'blue',
               fillColor: '#007bff',
-              fillOpacity: 1,
-              radius: 6000,
+              fillOpacity: 1.0,
+              radius: 5000,
           };
 
     const marker = L.circle([well.lat, well.lon], markerOptions).addTo(map);
+
+    // Add ripple effect for alert wells
+    if (well.alert) {
+        const rippleContainer = document.createElement('div');
+        rippleContainer.classList.add('alert-ripple');
+
+        // Append the ripple to the map's container
+        const markerElement = marker.getElement();
+        markerElement.parentElement.appendChild(rippleContainer);
+
+        // Position the ripple correctly
+        const mapPane = document.querySelector('.leaflet-marker-pane');
+        const rect = markerElement.getBoundingClientRect();
+        rippleContainer.style.left = `${rect.left + rect.width / 2}px`;
+        rippleContainer.style.top = `${rect.top + rect.height / 2}px`;
+    }
 
     // Find the nearest gateway
     let nearestGateway = null;
