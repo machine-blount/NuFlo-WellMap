@@ -113,7 +113,7 @@ const gatewayMarkers = gateways.map((gateway, index) => {
         pane: 'markersPane', // Place gateways in the markersPane
         color: 'red',
         fillColor: '#ff4d4d',
-        fillOpacity: 0.8,
+        fillOpacity: 1,
         radius: 5000,
     }).addTo(map);
 
@@ -133,15 +133,15 @@ wells.forEach((well, index) => {
               color: 'orange',
               fillColor: '#ffa500',
               fillOpacity: 1.0,
-              radius: 5000,
+              radius: 6000,
               className: 'alert-glow',
           }
         : {
               pane: 'markersPane',
               color: 'blue',
               fillColor: '#007bff',
-              fillOpacity: 0.5,
-              radius: 5000,
+              fillOpacity: 1,
+              radius: 6000,
           };
 
     const marker = L.circle([well.lat, well.lon], markerOptions).addTo(map);
@@ -204,7 +204,7 @@ wells.forEach((well, index) => {
 const style = document.createElement('style');
 style.innerHTML = `
 .alert-glow {
-    animation: fade-color 2s infinite; /* Updated animation */
+    animation: fade-color 1s infinite; /* Updated animation */
 }
 
 @keyframes fade-color {
