@@ -6,7 +6,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
 }).addTo(map);
 
-// Create custom panes for layering
 map.createPane('linesPane');
 map.getPane('linesPane').style.zIndex = 400; // Lower zIndex for lines
 map.createPane('markersPane');
@@ -14,10 +13,10 @@ map.getPane('markersPane').style.zIndex = 650; // Higher zIndex for markers (wel
 
 // Generate random well data focusing on rural areas on land
 const ruralAreas = [
-    { latMin: -16, latMax: -13, lonMin: -74, lonMax: -71 }, // Rural highlands near Ayacucho
-    { latMin: -14, latMax: -11, lonMin: -77, lonMax: -75 }, // Central rural zones
-    { latMin: -10, latMax: -8, lonMin: -76, lonMax: -73 },  // Upper Amazon basin
-    { latMin: -15, latMax: -12, lonMin: -70, lonMax: -68 }, // Rural areas near Puno
+    { latMin: -16, latMax: -13, lonMin: -74, lonMax: -71 }, 
+    { latMin: -14, latMax: -11, lonMin: -77, lonMax: -75 }, 
+    { latMin: -10, latMax: -8, lonMin: -76, lonMax: -73 },  
+    { latMin: -15, latMax: -12, lonMin: -70, lonMax: -68 }, 
 ];
 
 const isLand = (lat, lon) => {
@@ -104,9 +103,9 @@ const calculateDistance = (lat1, lon1, lat2, lon2) => {
 };
 
 // Generate data
-const wells = generateRuralWells(40); // 20 wells
-setAlerts(wells, 5); // Set alerts for 4 random wells
-const gateways = generateGateways(8); // 4 gateways
+const wells = generateRuralWells(40); 
+setAlerts(wells, 5);
+const gateways = generateGateways(8); 
 
 // Add gateways to the map
 const gatewayMarkers = gateways.map((gateway, index) => {
