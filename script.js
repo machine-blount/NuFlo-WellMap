@@ -38,7 +38,8 @@ const generateRuralWells = (count) => {
                 pH: (6.5 + Math.random() * 2).toFixed(2),
                 lead: (Math.random() * 0.1).toFixed(4),
                 coliform: Math.floor(Math.random() * 101),
-                nitrates: (Math.random() * 50).toFixed(2),
+                temperature: (20 + Math.random() * 5).toFixed(2),
+                tds: (50 + Math.random() * 500).toFixed(2),
                 alert: false, // Default alert status
                 issue: '', // Specific issue causing the alert
             });
@@ -65,8 +66,10 @@ const setAlerts = (wells, alertCount) => {
             well.issue = 'Lead levels too high';
         } else if (well.coliform > 50) {
             well.issue = 'High coliform levels';
-        } else if (well.nitrates > 40) {
-            well.issue = 'High nitrates levels';
+        } else if (well.temperature > 40) {
+            well.issue = 'High temperature levels';
+        } else if (well.tds > 500){
+            well.issue = 'High TDS levels';
         } else {
             well.issue = 'Unknown issue';
         }
@@ -197,7 +200,9 @@ wells.forEach((well, index) => {
                     <p><strong>pH:</strong> ${well.pH}</p>
                     <p><strong>Lead:</strong> ${well.lead} ppm</p>
                     <p><strong>Coliform:</strong> ${well.coliform} CFU/100ml</p>
-                    <p><strong>Nitrates:</strong> ${well.nitrates} ppm</p>
+                    <p><strong>temperature:</strong> ${well.temperature} C</p>
+                    <p><strong>TDS:</strong> ${well.tds} ppm</p>
+                
                 </div>
             `
             : `
@@ -206,7 +211,8 @@ wells.forEach((well, index) => {
                     <p><strong>pH:</strong> ${well.pH}</p>
                     <p><strong>Lead:</strong> ${well.lead} ppm</p>
                     <p><strong>Coliform:</strong> ${well.coliform} CFU/100ml</p>
-                    <p><strong>Nitrates:</strong> ${well.nitrates} ppm</p>
+                    <p><strong>temperature:</strong> ${well.temperature} C</p>
+                    <p><strong>TDS:</strong> ${well.tds} ppm</p>
                 </div>
             `;
 
