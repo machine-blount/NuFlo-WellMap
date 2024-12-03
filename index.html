@@ -1,58 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Water Wells Map</title>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JT1M8QDHE0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-JT1M8QDHE0"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-JT1M8QDHE0');
-</script>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+      gtag("config", "G-JT1M8QDHE0");
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-</head>
 
-<body>
+    <link rel="stylesheet" href="leaflet.legend.css" />
+    <script type="text/javascript" src="leaflet.legend.js"></script>
+  </head>
+
+  <body>
     <header>
-        <h1>AMPStudio's <br> NuFlo Water Sensor Network</h1>
-
+      <h1>
+        AMPStudio's <br />
+        NuFlo Water Sensor Network
+      </h1>
     </header>
 
     <main>
-        <section id = "content-section">
-            <div>
-                <h1>
-                    Real-time data tracking for rural water wells in Peru
-                </h1>
-            </div>
-            <div id = "content-container">
-                <p>
-                    Message the initiative increase the resolution, scale it up we need a larger print, or let's see if we can dovetail these two projects. 
-                    Are there any leftovers in the kitchen? red flag get all your ducks in a row. Crisp ppt circle back, for that is a good problem to have 
-                    increase the resolution, scale it up we need a larger print, yet we need evergreen content, yet table the discussion . Value prop flesh 
-                    that out personal development. Drill down. Not enough bandwidth shotgun approach. Innovation is hot right now i am dead inside low-hanging 
-                    fruit, yet 60% to 30% is a lot of persent this is a no-brainer, nor after I ran into Helen at a restaurant, I realized she was just office 
-                    pretty, yet execute . This proposal is a win-win situation which will cause a stellar paradigm shift, and produce a multi-fold increase in 
-                    deliverables run it up the flag pole manage expectations, race without a finish line.
-                </p>
-            </div>
-        </section>
-        <section id="map-container">
-            <div id="map"></div>
-        </section>
+      <section id="content-section">
+        <div>
+          <h1>MVP - Real-time data tracking for rural water wells in Peru</h1>
+        </div>
+        <div id="content-container">
+          <p>
+            <br />At NuFlo, our mission is to provide <b>real-time</b> water quality
+            data in remote regions to give organisations the necessary data to
+            act. <br />
+
+            <br />Here is a model of our data interface. This shows different
+            wells and the real-time data received, such as <b>pH, lead levels,
+            coliform, temperature, and TDS(Total Dissolved Solids)</b>. <br />
+
+            <br />Navigate the map below, clicking on safe wells (<b>blue circles</b>),
+            unsafe wells (<b>flashing</b>), and our data gateways (<b>red circles</b>). Wells
+            are connected to data gateways via <b>green dashed lines</b>. <br />
+
+            <br />Please note that this interface and well locations are <b>not</b>
+            representative of real-world locations or conditions. <br />
+          </p>
+        </div>
+      </section>
+      <section id="map-container">
+        <div id="map"></div>
+        <!-- <div id="mapid"></div> -->
+      </section>
     </main>
 
     <footer>
-        <p>Powered by OpenStreetMap and Leaflet.js. Built for NGOs and researchers.</p>
+      <p>
+        Powered by OpenStreetMap and Leaflet.js. Built for NGOs and researchers.
+      </p>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
+  

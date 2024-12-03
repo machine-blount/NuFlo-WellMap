@@ -6,16 +6,16 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-header {
+  }
+  
+  header {
     background: #007bff;
     color: white;
     text-align: center;
     padding: 1rem;
-}
-
-main {
+  }
+  
+  main {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -23,38 +23,39 @@ main {
     flex-direction: column;
     padding: 1rem;
     background: #f4f4f4;
-}
-
-#map-container {
+  }
+  
+  #map-container {
     width: 80%;
     height: 60vh;
     background: white;
     border: 1px solid #ddd;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#map {
+  }
+  
+  #map {
     width: 100%;
     height: 100%;
     border-radius: 8px;
-}
-
-#content-container {
-    width: 60%;
+  }
+  
+  #content-container {
+    width: 65%;
     align-items: center;
-}
-
-#content-section {
-padding: 0.5rem;
-justify-content: center;
-display: flex;
-align-items: center;
-flex-direction: column;
-}
-
-footer {
+  }
+  
+  #content-section {
+    padding: 0.5rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 0.5rem;
-}
+  }
+  
