@@ -234,7 +234,7 @@ wells.forEach((well, index) => {
                     <h3>Water Well #${index + 1}</h3>
                     <p><strong>ALERT:</strong> ${well.issue}</p>
                     <p><strong>pH:</strong> ${well.pH}</p>
-                    <p><strong>Lead:</strong> ${well.lead} ppm</p>
+                    <p><strong>Lead:</strong> ${well.lead} ppb</p>
                     <p><strong>Coliform:</strong> ${well.coliform} CFU/100ml</p>
                     <p><strong>Temperature:</strong> ${well.temperature} C</p>
                     <p><strong>TDS:</strong> ${well.tds} ppm</p>
@@ -245,7 +245,7 @@ wells.forEach((well, index) => {
                 <div>
                     <h3>Water Well #${index + 1}</h3>
                     <p><strong>pH:</strong> ${well.pH}</p>
-                    <p><strong>Lead:</strong> ${well.lead} ppm</p>
+                    <p><strong>Lead:</strong> ${well.lead} ppb</p>
                     <p><strong>Coliform:</strong> ${well.coliform} CFU/100ml</p>
                     <p><strong>Temperature:</strong> ${well.temperature} C</p>
                     <p><strong>TDS:</strong> ${well.tds} ppm</p>
